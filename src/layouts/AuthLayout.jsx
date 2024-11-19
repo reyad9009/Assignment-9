@@ -8,7 +8,7 @@ const AuthLayout = () => {
       <div className="max-w-[100rem] mx-auto">
         <Navbar></Navbar>
       </div>
-      <div className="mt-[10%]">
+      <div className="max-w-[100rem] mx-auto mt-[10%]">
         <Outlet></Outlet>
       </div>
     </div>
