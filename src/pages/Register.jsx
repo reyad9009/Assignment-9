@@ -2,12 +2,14 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
-  const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
+  const { createNewUser, setUser, updateUserProfile, signInWithGoogle } =
+    useContext(AuthContext);
   const [error, setError] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,11 +59,22 @@ const Register = () => {
         // console.log(errorCode, errorMessage);
       });
   };
+  // for google signIn
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log("Error", error.message);
+      });
+  };
   return (
     <div className="min-h-scree flex justify-center">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-        <h2 className="text-2xl font-extrabold">Register your account</h2>
-        <form onSubmit={handleSubmit} className="card-body">
+        <h2 className="text-2xl font-extrabold text-center ">Register your account</h2>
+        <form onSubmit={handleSubmit} className=" px-5">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
@@ -111,33 +124,45 @@ const Register = () => {
             </label>
 
             <label className="input input-bordered flex flex-row items-center justify-between gap-2">
-            <input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              placeholder="password"
-              className="input -ml-5 border-none hover:border-none"
-              required
-              
-            />
-            <button
-              onClick={() => setShowPassword(!showPassword)}
-              className="btn btn-xs"
-            >
-              {showPassword ? <FaEyeSlash className="text-lg"></FaEyeSlash> : <FaEye  className="text-lg"></FaEye>}
-            </button>
-            </label>
-
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="password"
+                className="input -ml-5 border-none hover:border-none"
+                required
+              />
+              <button
+                onClick={() => setShowPassword(!showPassword)}
+                className="btn btn-xs"
+              >
+                {showPassword ? (
+                  <FaEyeSlash className="text-lg"></FaEyeSlash>
+                ) : (
+                  <FaEye className="text-lg"></FaEye>
+                )}
+              </button>
             </label>
           </div>
-          <div className="form-control mt-6">
-            <button className="btn btn-primary">Register</button>
+
+          <div className="flex w-full flex-col mt-5">
+            <div className="card bg-base-300 rounded-box grid place-items-center">
+              <button className="btn btn-primary w-full">Register</button>
+            </div>
+            <div className="divider">OR</div>
           </div>
         </form>
-        <p className="text-center pb-5">
+
+        <div className="card rounded-box flex flex-col items-center justify-center gap-2">
+          <span className="font-semibold">Continue with Google</span>
+          <button
+            className="flex justify-center items-center"
+            onClick={handleGoogleSignIn}
+          >
+            <FcGoogle className="text-4xl" />
+          </button>
+        </div>
+
+        <p className="text-center pb-5 pt-5">
           Already have an account?{" "}
           <Link className="text-red-500" to="/auth/login">
             Login
