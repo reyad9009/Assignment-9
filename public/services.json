@@ -1,0 +1,101 @@
+[
+    {
+        "service_id": 1,
+        "service_name": "Career Counseling Sessions",
+        "category": "Online",
+        "brief_description": "Personalized career counseling to help you navigate your career path.",
+        "pricing": "$100",
+        "duration": "05-12-24 5-6pm",
+        "counselor": "John Doe",
+        "rating": 4.8,
+        "image": "career_counseling_sessions.jpg"
+    },
+    {
+        "service_id": 2,
+        "service_name": "Resume Review",
+        "category": "Offline",
+        "brief_description": "Get expert feedback on your resume to improve your chances in the job market.",
+        "pricing": "$50",
+        "duration": "06-12-24 2-3pm",
+        "counselor": "Jane Smith",
+        "rating": 4.7,
+        "image": "resume_review.jpg"
+    },
+    {
+        "service_id": 3,
+        "service_name": "Group Career Workshop",
+        "category": "Group",
+        "brief_description": "Join a group of like-minded individuals and get career guidance together.",
+        "pricing": "$30 per person",
+        "duration": "07-12-24 10-12pm",
+        "counselor": "Michael Lee",
+        "rating": 4.5,
+        "image": "group_career_workshop.jpg"
+    },
+    {
+        "service_id": 4,
+        "service_name": "Interview Preparation",
+        "category": "Online",
+        "brief_description": "Prepare for your job interviews with mock sessions and feedback.",
+        "pricing": "$80",
+        "duration": "08-12-24 4-5pm",
+        "counselor": "Sarah Johnson",
+        "rating": 4.9,
+        "image": "interview_preparation.jpg"
+    },
+    {
+        "service_id": 5,
+        "service_name": "LinkedIn Profile Optimization",
+        "category": "Offline",
+        "brief_description": "Get your LinkedIn profile optimized to stand out to recruiters.",
+        "pricing": "$70",
+        "duration": "09-12-24 1-2pm",
+        "counselor": "David Williams",
+        "rating": 4.6,
+        "image": "linkedin_optimization.jpg"
+    },
+    {
+        "service_id": 6,
+        "service_name": "Salary Negotiation Coaching",
+        "category": "Group",
+        "brief_description": "Learn strategies for negotiating your salary and benefits in your next job.",
+        "pricing": "$90",
+        "duration": "10-12-24 3-4pm",
+        "counselor": "Emily Clark",
+        "rating": 4.8,
+        "image": "salary_negotiation.jpg"
+    },
+    {
+        "service_id": 7,
+        "service_name": "Job Search Strategy Session",
+        "category": "Online",
+        "brief_description": "Get tailored job search strategies based on your experience and goals.",
+        "pricing": "$75",
+        "duration": "11-12-24 11-12pm",
+        "counselor": "Robert White",
+        "rating": 4.7,
+        "image": "job_search_strategy.jpg"
+    },
+    {
+        "service_id": 8,
+        "service_name": "Career Transition Support",
+        "category": "Offline",
+        "brief_description": "Assistance with transitioning to a new career field or industry.",
+        "pricing": "$120",
+        "duration": "12-12-24 6-7pm",
+        "counselor": "Olivia Brown",
+        "rating": 4.9,
+        "image": "career_transition.jpg"
+    },
+    {
+        "service_id": 9,
+        "service_name": "Skill Development Plan",
+        "category": "Group",
+        "brief_description": "Create a personalized plan to develop the skills needed for your career goals.",
+        "pricing": "$85",
+        "duration": "13-12-24 10-11am",
+        "counselor": "James Harris",
+        "rating": 4.6,
+        "image": "skill_development_plan.jpg"
+    }
+]
