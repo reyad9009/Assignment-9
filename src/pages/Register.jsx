@@ -11,6 +11,7 @@ const Register = () => {
   const { createNewUser, setUser, updateUserProfile, signInWithGoogle } =
     useContext(AuthContext);
   const [error, setError] = useState({});
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
