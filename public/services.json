@@ -8,7 +8,7 @@
         "duration": "05-12-24 5-6pm",
         "counselor": "John Doe",
         "rating": 4.8,
-        "image": "career_counseling_sessions.jpg"
+        "image": "https://i.ibb.co.com/HG7T6s8/Career-Counseling-Sessions.jpg"
     },
     {
         "service_id": 2,
@@ -19,7 +19,7 @@
         "duration": "06-12-24 2-3pm",
         "counselor": "Jane Smith",
         "rating": 4.7,
-        "image": "resume_review.jpg"
+        "image": "https://i.ibb.co.com/Ntqgg15/Resume-Review.webp"
     },
     {
         "service_id": 3,
@@ -30,7 +30,7 @@
         "duration": "07-12-24 10-12pm",
         "counselor": "Michael Lee",
         "rating": 4.5,
-        "image": "group_career_workshop.jpg"
+        "image": "https://i.ibb.co.com/rsB9FSX/Group-Career-Workshop.webp"
     },
     {
         "service_id": 4,
@@ -41,7 +41,7 @@
         "duration": "08-12-24 4-5pm",
         "counselor": "Sarah Johnson",
         "rating": 4.9,
-        "image": "interview_preparation.jpg"
+        "image": "https://i.ibb.co.com/SvBJvL2/Interview-Preparation.png"
     },
     {
         "service_id": 5,
@@ -52,7 +52,7 @@
         "duration": "09-12-24 1-2pm",
         "counselor": "David Williams",
         "rating": 4.6,
-        "image": "linkedin_optimization.jpg"
+        "image": "https://i.ibb.co.com/x6LSQn5/Linked-In-Profile-Optimization.png"
     },
     {
         "service_id": 6,
@@ -63,7 +63,7 @@
         "duration": "10-12-24 3-4pm",
         "counselor": "Emily Clark",
         "rating": 4.8,
-        "image": "salary_negotiation.jpg"
+        "image": "https://i.ibb.co.com/Mh2LHRG/Salary-Negotiation-Coaching.jpg"
     },
     {
         "service_id": 7,
@@ -74,7 +74,7 @@
         "duration": "11-12-24 11-12pm",
         "counselor": "Robert White",
         "rating": 4.7,
-        "image": "job_search_strategy.jpg"
+        "image": "https://i.ibb.co.com/MNjzVQk/Job-Search-Strategy-Session.jpg"
     },
     {
         "service_id": 8,
@@ -85,7 +85,7 @@
         "duration": "12-12-24 6-7pm",
         "counselor": "Olivia Brown",
         "rating": 4.9,
-        "image": "career_transition.jpg"
+        "image": "https://i.ibb.co.com/Sx2mq1Q/Career-Transition-Support.webp"
     },
     {
         "service_id": 9,
@@ -96,6 +96,6 @@
         "duration": "13-12-24 10-11am",
         "counselor": "James Harris",
         "rating": 4.6,
-        "image": "skill_development_plan.jpg"
+        "image": "https://i.ibb.co.com/zrL31c4/Skill-Development-Plan.webp"
     }
 ]

@@ -1,28 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 
-const CategoryNavbar = () => {
+const CategoryNavbar = ({ onCategorySelect }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     fetch("category.json")
       .then((res) => res.json())
-      .then((data) => {
-        setCategories(data); 
-      })
+      .then((data) => setCategories(data));
   }, []);
 
   return (
     <div>
       <div className="flex flex-row gap-3">
+        <button className="btn" onClick={() => onCategorySelect("All")}>
+          All Services
+        </button>
+
         {categories.map((category) => (
-          <NavLink
-            to={`/category/${category.id}`}
-            className="btn"
+          <button
             key={category.id}
+            className="btn"
+            onClick={() => onCategorySelect(category.category)}
           >
             {category.category}
-          </NavLink>
+          </button>
         ))}
       </div>
     </div>

@@ -9,6 +9,7 @@ import MyProfile from "../pages/MyProfile";
 import PrivateRout from "./PrivateRout";
 import ForgotPassword from "../pages/ForgotPassword";
 import CategoryItem from "../pages/CategoryItem";
+import Services from "../pages/Services";
 
 const router = createBrowserRouter([
     {
@@ -19,14 +20,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                children: [
-                    {
-                        path: "/",
-                        element: <CategoryItem></CategoryItem>,
-                        loader: () => fetch('counselor.json')
-                    },
-                ],
-              
+
             },
         ],
     },
