@@ -23,7 +23,7 @@ const MyProfile = () => {
         toast.warn('All ready Exists')
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
       });
   };
   return (

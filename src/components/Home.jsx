@@ -6,8 +6,11 @@ import Services from "../pages/Services";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
+      <div className="flex justify-center items-center">
       <Banner></Banner>
+      </div>
+     
       <div className="flex flex-col justify-center items-center my-16 gap-10">
         <CategoryNavbar />
         <Services />

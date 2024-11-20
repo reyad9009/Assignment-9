@@ -18,7 +18,7 @@ const Services = () => {
         setServices(filteredByCategory);
       } else {
         setServices(data);
-        console.log(data);
+       // console.log(data);
       }
     }
   }, [category, data]);

@@ -50,7 +50,7 @@ const Register = () => {
             navigate("/");
           })
           .catch((err) => {
-            console.log(err);
+           // console.log(err);
           });
         // navigate(location?.state ? location.state : "/");
       })
@@ -64,11 +64,11 @@ const Register = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
+       // console.log(result.user);
         navigate("/");
       })
       .catch((error) => {
-        console.log("Error", error.message);
+       // console.log("Error", error.message);
       });
   };
   return (
