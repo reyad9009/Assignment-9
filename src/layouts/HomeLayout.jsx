@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet-async";
+import WhyCourse from "../components/WhyCourse";
 
 const HomeLayout = () => {
   return (
@@ -13,6 +14,9 @@ const HomeLayout = () => {
       </div>
       <div className="flex justify-center items-center mt-10">
       <Outlet></Outlet>
+      </div>
+      <div className="font-poppins">
+        <WhyCourse></WhyCourse>
       </div>
       <div className="w-full">
         <Footer></Footer>
