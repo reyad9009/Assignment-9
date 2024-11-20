@@ -1,31 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import ServicesCard from './ServicesCard';
+import React, { useEffect, useState } from "react";
+import ServicesCard from "../pages/ServicesCard";
+import { useLoaderData, useParams } from "react-router-dom";
 
-const Services = ({ selectedCategory }) => {
-    const [services, setServices] = useState([]);
+const Services = () => {
+  const data = useLoaderData();
+  const { category } = useParams();
 
-    useEffect(() => {
-        fetch('services.json')
-            .then((res) => res.json())
-            .then((data) => {
-                if (selectedCategory === 'All') {
-                    setServices(data);  // Show all services
-                } else {
-                    const filteredServices = data.filter(
-                        (service) => service.category === selectedCategory
-                    );
-                    setServices(filteredServices);
-                }
-            });
-    }, [selectedCategory]);
+  const [services, setServices] = useState([]);
 
-    return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20'>
-            {services.map((service) => (
-                <ServicesCard key={service.service_id} service={service} />
-            ))}
-        </div>
-    );
+  useEffect(() => {
+    if (data) {
+      // Check if data is defined
+      if (category) {
+        const filteredByCategory = data.filter(
+          (service) => service.category === category
+        );
+        setServices(filteredByCategory);
+      } else {
+        setServices(data);
+        console.log(data);
+      }
+    }
+  }, [category, data]);
+
+  if (!services) return <div>Loading...</div>; // Optional: show loading if services is not defined
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {services.map((service, service_id) => (
+        <ServicesCard key={service_id} service={service} />
+      ))}
+    </div>
+  );
 };
 
 export default Services;

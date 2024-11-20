@@ -8,46 +8,65 @@ import Register from "../pages/Register";
 import MyProfile from "../pages/MyProfile";
 import PrivateRout from "./PrivateRout";
 import ForgotPassword from "../pages/ForgotPassword";
-import CategoryItem from "../pages/CategoryItem";
 import Services from "../pages/Services";
+import ServiceDetail from "../pages/ServiceDetail";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <HomeLayout></HomeLayout>,
-        errorElement: <Error></Error>,
+  {
+    path: "/",
+    element: <HomeLayout></HomeLayout>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("../services.json"),
         children: [
-            {
-                path: "/",
-                element: <Home></Home>,
-
-            },
+          {
+            path: "/",
+            element: <Services></Services>,
+          },
+          {
+            path: "/category/:category",
+            element: <Services />, // Same loader but filtered in Services
+          },
         ],
-    },
-    {
-        path: '/auth',
-        element: <AuthLayout></AuthLayout>,
-        children: [
-            {
-                path: '/auth/login',
-                element: <Login></Login>
-            },
-            {
-                path: '/auth/register',
-                element: <Register></Register>
-            },
-            {
-                path: '/auth/profile',
-                element: <PrivateRout>
-                    <MyProfile></MyProfile>
-                </PrivateRout>
-            },
-            {
-                path: '/auth/forgot-password',
-                element: <ForgotPassword></ForgotPassword>
-            }
-        ]
-    }
-])
+      },
+      {
+        path: "/services/:service_id",
+        element: <PrivateRout>
+            <ServiceDetail></ServiceDetail>,
+        </PrivateRout>,
+        loader: () => fetch("../services.json"),
+      }
+    ],
+  },
+  {
+    path: "/auth",
+    element: <AuthLayout></AuthLayout>,
+    children: [
+      {
+        path: "/auth/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/auth/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/auth/profile",
+        element: (
+          <PrivateRout>
+            <MyProfile></MyProfile>
+          </PrivateRout>
+        ),
+      },
+      {
+        path: "/auth/forgot-password",
+        element: <ForgotPassword></ForgotPassword>,
+      },
+    ],
+  },
+]);
 
 export default router;

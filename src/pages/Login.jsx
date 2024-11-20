@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { userLogin, setUser } = useContext(AuthContext);
@@ -19,11 +20,12 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        alert("succes");
+        toast.success('success')
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         setError({ ...error, login:err.code });
+        toast.warn('All ready Exists')
       });
   };
   return (

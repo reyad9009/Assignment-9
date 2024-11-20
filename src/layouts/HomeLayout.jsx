@@ -9,7 +9,9 @@ const HomeLayout = () => {
       <div className="max-w-[100rem] mx-auto">
         <Navbar></Navbar>
       </div>
+      <div className="flex justify-center items-center mt-10">
       <Outlet></Outlet>
+      </div>
       <div className="max-w-[100rem] mx-auto">
         <Footer></Footer>
       </div>
