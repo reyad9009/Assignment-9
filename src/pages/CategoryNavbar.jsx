@@ -1,23 +1,3 @@
-// import React from 'react';
-// //import { NavLink, useLoaderData } from 'react-router-dom';
-
-// const CategoryNavbar = () => {
-//  //const categories = useLoaderData(); // Load the categories data
-
-//   // return (
-//   //   // <div className="flex space-x-4 p-4">
-//   //   //   <NavLink to='/'>all Services</NavLink>
-//   //   //   {categories.map((category) => (
-//   //   //     <NavLink to={`/category/${category.category}`}  key={category.id}
-//   //   //     className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-//   //   //      {category.category}
-//   //   //     </NavLink>
-//   //   //   ))}
-//   //   // </div>
-//   // );
-// };
-
-// export default CategoryNavbar;
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -31,10 +11,18 @@ const CategoryNavbar = () => {
   }, []);
 
   return (
-    <div className="flex space-x-4 p-4">
+   <div>
+    <div>
+      <h1 className="text-center text-4xl font-bold mb-14">Our Services</h1>
+    </div>
+     <div className="flex space-x-4 p-4">
       <NavLink
         to="/"
-        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-[#9538e2] text-white font-bold px-10 btn rounded-full"
+            : "bg-white px-10 btn rounded-full"
+        }
       >
         All Services
       </NavLink>
@@ -42,12 +30,17 @@ const CategoryNavbar = () => {
         <NavLink
           key={category.id}
           to={`/category/${category.category}`}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#9538e2] text-white font-bold px-10 btn rounded-full"
+              : "bg-white px-10 btn rounded-full"
+          }
         >
           {category.category}
         </NavLink>
       ))}
     </div>
+   </div>
   );
 };
 

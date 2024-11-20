@@ -26,7 +26,7 @@ const Services = () => {
   if (!services) return <div>Loading...</div>; // Optional: show loading if services is not defined
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
       {services.map((service, service_id) => (
         <ServicesCard key={service_id} service={service} />
       ))}
