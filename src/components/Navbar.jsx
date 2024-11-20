@@ -9,27 +9,14 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-    </>
-  );
-
-  const authLinks = (
-    <>
       <li>
-        <NavLink to="/">Home</NavLink>
-        {/* {user && (
-            <>
-              <li>
-                <NavLink to="/orders">Orders</NavLink>
-                <NavLink to="/profile">Profile</NavLink>
-              </li>
-            </>
-          )} */}
+        <NavLink to="/">About</NavLink>
       </li>
     </>
   );
 
   return (
-    <div>
+    <div className="mt-5 font-poppins">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -56,24 +43,18 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to="/">
+          <a className="btn btn-ghost text-3xl font-bold text-[#2196f3]">
+            Career Kindle
+          </a>
+          </Link>
+          
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu menu-horizontal flex gap-10 text-lg font-extrabold">{links}</ul>
         </div>
         <div className="navbar-end ">
-
           <div className="">
-            {user && user?.email ? (
-              <Link to='/auth/profile' className="btn btn-neutral">
-                My Profile
-              </Link>
-            ) : (
-              ""
-            )}
-          </div>
-
-          <div className=" px-4">
             {user && user?.email ? (
               <div>
                 <img
@@ -88,13 +69,32 @@ const Navbar = () => {
             )}
           </div>
 
+          <div className="px-5">
+            {user && user?.email ? (
+              <Link
+                to="/auth/profile"
+                className="bg-[#2196f3] px-8 py-3 text-xl font-semibold rounded-full text-white"
+              >
+                My Profile
+              </Link>
+            ) : (
+              ""
+            )}
+          </div>
+
           <div className="">
             {user && user?.email ? (
-              <button onClick={logOut} className="btn btn-neutral">
+              <button
+                onClick={logOut}
+                className="bg-[#2196f3] px-8 py-3 text-xl  font-semibold rounded-full text-white"
+              >
                 Logout
               </button>
             ) : (
-              <Link to="/auth/login" className="btn btn-neutral">
+              <Link
+                to="/auth/login"
+                className="bg-[#2196f3] px-8 py-3 text-xl font-semibold rounded-full text-white"
+              >
                 Login
               </Link>
             )}

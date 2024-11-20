@@ -6,7 +6,7 @@ import Services from "../pages/Services";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="font-poppins">
       <div className="flex justify-center items-center">
       <Banner></Banner>
       </div>

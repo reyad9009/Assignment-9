@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -26,19 +28,7 @@ const Register = () => {
     //console.log({ name, email, photo, password });
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
-      toast.error(
-        "Password must have at least one uppercase letter, one lowercase letter, and be at least 6 characters long.",
-        {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        }
-      );
+      toast.warn('Password Must have an Uppercase & Lowercase at least 6 character')
       return;
     }
     createNewUser(email, password)
@@ -52,6 +42,7 @@ const Register = () => {
           .catch((err) => {
            // console.log(err);
           });
+          toast.success('Registration successful')
         // navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -66,19 +57,22 @@ const Register = () => {
       .then((result) => {
        // console.log(result.user);
         navigate("/");
+        toast.success('Registration successful')
       })
       .catch((error) => {
        // console.log("Error", error.message);
+      
       });
   };
   return (
     <div className="min-h-scree flex justify-center">
+      <Helmet><title>Career Kindle | Register </title></Helmet>
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-        <h2 className="text-2xl font-extrabold text-center ">Register your account</h2>
+        <h2 className="text-3xl mb-10 font-extrabold text-center ">Register your account</h2>
         <form onSubmit={handleSubmit} className=" px-5">
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text font-bold text-lg">Name</span>
             </label>
             <input
               type="text"
@@ -95,7 +89,7 @@ const Register = () => {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Photo URL</span>
+              <span className="label-text font-bold text-lg">Photo URL</span>
             </label>
             <input
               type="text"
@@ -108,7 +102,7 @@ const Register = () => {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text font-bold text-lg">Email</span>
             </label>
             <input
               type="email"
@@ -121,20 +115,19 @@ const Register = () => {
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text font-bold text-lg">Password</span>
             </label>
 
-            <label className="input input-bordered flex flex-row items-center justify-between gap-2">
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="password"
-                className="input -ml-5 border-none hover:border-none"
+                className="input  input-bordered relative"
                 required
               />
               <button
                 onClick={() => setShowPassword(!showPassword)}
-                className="btn btn-xs"
+                className=" absolute ml-[19rem] mt-[3.2rem] p-2 bg-white"
               >
                 {showPassword ? (
                   <FaEyeSlash className="text-lg"></FaEyeSlash>
@@ -142,12 +135,12 @@ const Register = () => {
                   <FaEye className="text-lg"></FaEye>
                 )}
               </button>
-            </label>
+
           </div>
 
           <div className="flex w-full flex-col mt-5">
             <div className="card bg-base-300 rounded-box grid place-items-center">
-              <button className="btn btn-primary w-full">Register</button>
+              <button className="btn w-full bg-[#2196f3] text-white font-bold text-xl">Register</button>
             </div>
             <div className="divider">OR</div>
           </div>
@@ -165,7 +158,7 @@ const Register = () => {
 
         <p className="text-center pb-5 pt-5">
           Already have an account?{" "}
-          <Link className="text-red-500" to="/auth/login">
+          <Link className="text-red-600 font-bold" to="/auth/login">
             Login
           </Link>
         </p>

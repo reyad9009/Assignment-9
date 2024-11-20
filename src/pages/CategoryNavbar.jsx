@@ -11,36 +11,36 @@ const CategoryNavbar = () => {
   }, []);
 
   return (
-   <div>
     <div>
-      <h1 className="text-center text-4xl font-bold mb-14">Our Services</h1>
-    </div>
-     <div className="flex space-x-4 p-4">
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          isActive
-            ? "bg-[#9538e2] text-white font-bold px-10 btn rounded-full"
-            : "bg-white px-10 btn rounded-full"
-        }
-      >
-        All Services
-      </NavLink>
-      {categories.map((category) => (
+      <div>
+        <h1 className="text-center text-5xl font-bold mb-14">Our Services</h1>
+      </div>
+      <div className="flex space-x-4 p-4">
         <NavLink
-          key={category.id}
-          to={`/category/${category.category}`}
+          to="/"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#9538e2] text-white font-bold px-10 btn rounded-full"
-              : "bg-white px-10 btn rounded-full"
+              ? "bg-[#2196f3] text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg px-10 btn rounded-full border-[#2196f3] hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
           }
         >
-          {category.category}
+          All Services
         </NavLink>
-      ))}
+        {categories.map((category) => (
+          <NavLink
+            key={category.id}
+            to={`/category/${category.category}`}
+            className={({ isActive }) =>
+              isActive
+                ? "bg-[#2196f3] text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+                : "bg-white text-lg px-10 btn rounded-full border-[#2196f3] hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+            }
+          >
+            {category.category}
+          </NavLink>
+        ))}
+      </div>
     </div>
-   </div>
   );
 };
 

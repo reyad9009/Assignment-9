@@ -17,7 +17,7 @@ const ServicesCard = ({ service }) => {
           <span className="font-semibold text-base">Counselor: {counselor}</span>
           <div className="card-actions justify-start">
             <Link to={`/services/${service.service_id}`}>
-              <button className="px-6 py-3 font-bold rounded-full text-[#b574eb] border border-[#b574eb] mt-2 mb-4">
+              <button className="px-6 py-3 font-bold rounded-full bg-[#2196f3] text-white text-base mt-2 mb-4">
                 Learn More
               </button>
             </Link>

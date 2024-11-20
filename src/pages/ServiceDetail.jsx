@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import Comment from "../pages/Comment";
+import { Helmet } from "react-helmet-async";
 
 const ServiceDetail = () => {
   const data = useLoaderData();
@@ -23,34 +24,35 @@ const ServiceDetail = () => {
 
   return (
     <div>
+      <Helmet><title>Career Kindle | Services Details</title></Helmet>
       <div>
-        <h1 className="text-center text-4xl font-extrabold mb-14">
+        <h1 className="text-center text-4xl font-extrabold mb-7">
           Service Details
         </h1>
       </div>
       <div className="flex justify-center items-start gap-40">
-        <div className="card card-compact w-[40rem] h-auto flex flex-col border">
+        <div className="card card-compact w-[30rem] h-auto flex flex-col border">
           <figure className="flex justify-center items-center">
-            <img className="w-[90%] rounded-xl" src={image} alt={service_name} />
+            <img className="w-[100%] rounded-t-lg" src={image} alt={service_name} />
           </figure>
           <div className="card-body flex flex-grow justify-end ml-5 my-5">
-            <span className="card-title text-4xl font-bold">
+            <span className="card-title text-3xl font-bold">
               {service_name}
             </span>
-            <span className="text-xl font-semibold">{category}</span>
-            <span className="text-xl font-semibold">{duration}</span>
-            <span className="text-xl font-semibold">Price : {pricing}</span>
-            <span className="text-xl font-semibold">
+            <span className="text-lg font-semibold">{category}</span>
+            <span className="text-lg font-semibold">{duration}</span>
+            <span className="text-lg font-semibold">Price : {pricing}</span>
+            <span className="text-lg font-semibold">
               Counselor: {counselor}
             </span>
-            <span className="font-bold text-xl">Rating ⭐</span>
+            <span className="font-bold text-lg">Rating ⭐</span>
             <div className="flex gap-5 items-center">
-              <Rating style={{ maxWidth: 150 }} readOnly value={rating} />
-              <span>{rating}</span>
+              <Rating style={{ maxWidth: 120 }} readOnly value={rating} />
+              <span className="text-lg">{rating}</span>
             </div>
-            <p className="text-xl font-semibold">{brief_description}</p>
+            <p className="text-lg font-semibold">{brief_description}</p>
             <div className="card-actions justify-start">
-              <button className="btn bg-orange-500 px-10 text-xl">
+              <button className="btn bg-[#2196f3] px-10 text-lg text-white">
                 Enroll Now
               </button>
             </div>

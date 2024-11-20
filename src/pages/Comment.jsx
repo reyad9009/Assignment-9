@@ -22,7 +22,7 @@ const Comment = () => {
         />
         <button
           onClick={handleAddComment}
-          className="btn bg-blue-500 text-white px-10"
+          className="btn bg-[#2196f3] font-bold text-lg text-white px-10"
         >
           Add Comment
         </button>

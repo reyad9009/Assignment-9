@@ -5,14 +5,14 @@ import Footer from "../components/Footer";
 
 const AuthLayout = () => {
   return (
-    <div>
+    <div className="font-poppins">
       <div className="max-w-[100rem] mx-auto">
         <Navbar></Navbar>
       </div>
-      <div className="max-w-[100rem] mx-auto mt-[10%]">
+      <div className="max-w-[100rem] mx-auto mt-[5%]">
         <Outlet></Outlet>
       </div>
-      <div className="max-w-[100rem] mx-auto">
+      <div className="">
         <Footer></Footer>
       </div>
     </div>
