@@ -111,11 +111,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div className="md:pr-5">
+          <div className="md:pr-5 pr-4">
             {user && user?.email ? (
               <div>
                 <img
-                  className="w-12 h-12 border-[#2196f3] border-2 rounded-full hidden lg:block"
+                  className="lg:w-12 lg:h-12 w-10 h-[10]  border-[#2196f3] border-2 rounded-full"
                   src={user?.photoURL}
                   alt=""
                   title={user.displayName}
