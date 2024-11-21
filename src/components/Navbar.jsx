@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
-  const {user, logOut} = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const links = (
     <>
       <li>
@@ -55,6 +55,19 @@ const Navbar = () => {
           My Classes
         </NavLink>
       </li>
+
+      <li>
+        <NavLink
+          to="/auth/profile"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#2196f3] lg:text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg font-bold px-10 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+          }
+        >
+          My Profile
+        </NavLink>
+      </li>
     </>
   );
 
@@ -81,7 +94,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-80 p-2 shadow flex gap-5"
             >
               {links}
             </ul>
@@ -98,11 +111,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div className="">
+          <div className="md:pr-5">
             {user && user?.email ? (
               <div>
                 <img
-                  className="w-12 border-[#2196f3] border-2 rounded-full hidden lg:block"
+                  className="w-12 h-12 border-[#2196f3] border-2 rounded-full hidden lg:block"
                   src={user?.photoURL}
                   alt=""
                   title={user.displayName}
@@ -113,7 +126,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="px-5">
+          {/* <div className="px-5">
             
               <Link
                 to="/auth/profile"
@@ -121,7 +134,7 @@ const Navbar = () => {
               >
                 My Profile
               </Link>
-          </div>
+          </div> */}
 
           <div className="">
             {user && user?.email ? (

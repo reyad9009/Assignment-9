@@ -31,7 +31,7 @@ const MyProfile = () => {
       });
   };
   return (
-    <div className="min-h-scree flex flex-row justify-center items-start">
+    <div className="min-h-scree flex lg:flex-row flex-col justify-center lg:items-start items-center">
       <Helmet><title>Career Kindle | Profile</title></Helmet>
       <div className="p-7">
 
