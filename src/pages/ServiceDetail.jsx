@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useOutletContext, useParams } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import Comment from "../pages/Comment";
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 
 const ServiceDetail = () => {
   const data = useLoaderData();
@@ -21,7 +22,21 @@ const ServiceDetail = () => {
     rating,
     image,
   } = service;
-
+ 
+  const { addToCard, addCardItem,} = useOutletContext();
+  const handleMarkAsRead = () => {
+    const itemExists = addToCard.some((item) => item.service_id === service.service_id);
+    if (itemExists) {
+      //alert("Item already exists in the card.");
+     toast.warn('All ready Exists')
+    } 
+    else {
+      addCardItem(service);
+      //alert("Item added to card successfully!");
+      toast.success(`${service_name} Added Your Card Success`);
+    }
+   // addCardItem(gadget); 
+  };
   return (
     <div>
       <Helmet><title>Career Kindle | Services Details</title></Helmet>
@@ -52,7 +67,7 @@ const ServiceDetail = () => {
             </div>
             <p className="text-lg font-semibold">{brief_description}</p>
             <div className="card-actions justify-start">
-              <button className="btn bg-[#2196f3] px-10 text-lg text-white">
+              <button onClick={()=>handleMarkAsRead(service_id)} className="btn bg-[#2196f3] px-10 text-lg text-white">
                 Enroll Now
               </button>
             </div>

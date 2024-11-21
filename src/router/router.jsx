@@ -10,6 +10,7 @@ import PrivateRout from "./PrivateRout";
 import ForgotPassword from "../pages/ForgotPassword";
 import Services from "../pages/Services";
 import ServiceDetail from "../pages/ServiceDetail";
+import MyClass from "../pages/MyClass";
 
 const router = createBrowserRouter([
   {
@@ -34,11 +35,21 @@ const router = createBrowserRouter([
       },
       {
         path: "/services/:service_id",
-        element: <PrivateRout>
+        element: (
+          <PrivateRout>
             <ServiceDetail></ServiceDetail>,
-        </PrivateRout>,
+          </PrivateRout>
+        ),
         loader: () => fetch("../services.json"),
-      }
+      },
+      {
+        path: "/my-class",
+        element: (
+          <PrivateRout>
+            <MyClass></MyClass>
+          </PrivateRout>
+        ),
+      },
     ],
   },
   {

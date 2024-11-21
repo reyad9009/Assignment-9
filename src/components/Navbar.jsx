@@ -7,10 +7,22 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" className={({ isActive }) =>
+            isActive
+              ? "bg-[#2196f3] text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg px-10 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+          }>Home</NavLink>
       </li>
       <li>
-        <NavLink to="/">About</NavLink>
+        <NavLink to="about">About</NavLink>
+      </li>
+      <li>
+        <NavLink to="/my-class"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-[#2196f3] text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+            : "bg-white text-lg px-10 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+        }>My Classes</NavLink>
       </li>
     </>
   );
