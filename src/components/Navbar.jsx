@@ -18,6 +18,19 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
+
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#2196f3] text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg font-bold px-10 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+          }
+        >
+          About us
+        </NavLink>
+      </li>
       <li>
         <NavLink
           to="/faq"
@@ -89,7 +102,7 @@ const Navbar = () => {
             {user && user?.email ? (
               <div>
                 <img
-                  className="w-10 rounded-full hidden lg:block"
+                  className="w-12 border-[#2196f3] border-2 rounded-full hidden lg:block"
                   src={user?.photoURL}
                   alt=""
                   title={user.displayName}
