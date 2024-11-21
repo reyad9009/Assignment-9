@@ -33,7 +33,7 @@ const MyProfile = () => {
   return (
     <div className="min-h-scree flex lg:flex-row flex-col justify-center lg:items-start items-center">
       <Helmet><title>Career Kindle | Profile</title></Helmet>
-      <div className="p-7">
+      <div className="p-7 w-[25rem] lg:w-[35rem]">
 
         <div className="flex items-center gap-6 bg-[#2196f3] rounded-t-xl">
           <div className="w-28 overflow-hidden p-2 ">
