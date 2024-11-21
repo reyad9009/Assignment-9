@@ -3,6 +3,7 @@ import React, { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 
 const ForgotPassword = () => {
   const { forgotPassword, auth } = useContext(AuthContext);
@@ -14,7 +15,8 @@ const ForgotPassword = () => {
 
     forgotPassword(email)
     .then(() => {
-        alert("Password reset email sent successfully! Please check your inbox.");
+      toast.success("Password reset email sent successfully! Please check your inbox.")
+        //alert("Password reset email sent successfully! Please check your inbox.");
         window.open("https://mail.google.com", "_blank");
         e.target.reset();
       })

@@ -18,10 +18,10 @@ const Register = () => {
     e.preventDefault();
     const form = new FormData(e.target);
     const name = form.get("name");
-    if (name.length < 5) {
-      setError({ ...error, name: "must be more the 5 character long" });
-      return;
-    }
+    // if (name.length < 5) {
+    //   setError({ ...error, name: "must be more the 5 character long" });
+    //   return;
+    // }
     const email = form.get("email");
     const photo = form.get("photo");
     const password = form.get("password");

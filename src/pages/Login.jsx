@@ -86,7 +86,7 @@ const Login = () => {
                 )}
               </button>
 
-            {error.login && <label className="label">{error.login}</label>}
+            {/* {error.login && <label className="label">{error.login}</label>} */}
 
             <label className="label">
               <Link to="/auth/forgot-password" className="label-text-alt link link-hover text-base mt-2">

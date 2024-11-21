@@ -11,8 +11,8 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#2196f3] text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
-              : "bg-white text-lg font-bold px-10 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+              ? "bg-[#2196f3] text-lg text-white font-bold md:px-5 px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg font-bold px-10 md:px-5 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
           }
         >
           Home
@@ -87,7 +87,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <a className="lg:btn lg:btn-ghost lg:text-3xl text-xl font-bold text-[#2196f3]">
+            <a className="lg:btn lg:btn-ghost lg:text-[#2196f3] lg:text-3xl text-xl font-bold text-[#2196f3]">
               Career Kindle
             </a>
           </Link>
@@ -97,7 +97,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <div className="navbar-end ">
+        <div className="navbar-end">
           <div className="">
             {user && user?.email ? (
               <div>
@@ -117,7 +117,7 @@ const Navbar = () => {
             
               <Link
                 to="/auth/profile"
-                className="bg-[#2196f3] lg:px-8 lg:py-3 px-2 py-2 lg:text-xl text-sm font-semibold rounded-full text-white"
+                className="bg-[#2196f3]  lg:px-8 lg:py-3 px-2 py-2 lg:text-xl text-sm font-semibold rounded-full text-white"
               >
                 My Profile
               </Link>
