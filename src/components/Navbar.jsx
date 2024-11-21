@@ -11,8 +11,8 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#2196f3] text-lg text-white font-bold md:px-5 px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
-              : "bg-white text-lg font-bold px-10 md:px-5 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+              ? "bg-[#2196f3] text-lg text-white font-bold md:px-5 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg font-bold md:px-5 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
           }
         >
           Home
@@ -24,8 +24,8 @@ const Navbar = () => {
           to="/about"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#2196f3] text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
-              : "bg-white text-lg font-bold px-10 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+              ? "bg-[#2196f3] text-lg text-white font-bold md:px-5 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg font-bold md:px-5 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
           }
         >
           About us
@@ -36,8 +36,8 @@ const Navbar = () => {
           to="/faq"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#2196f3] lg:text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
-              : "bg-white text-lg font-bold px-10 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+              ? "bg-[#2196f3] lg:text-lg text-white font-bold md:px-5 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg font-bold md:px-5 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
           }
         >
           FAQ
@@ -48,8 +48,8 @@ const Navbar = () => {
           to="/my-classes"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#2196f3] lg:text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
-              : "bg-white text-lg font-bold px-10 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+              ? "bg-[#2196f3] lg:text-lg text-white font-bold md:px-5 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg font-bold md:px-5 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
           }
         >
           My Classes
@@ -61,8 +61,8 @@ const Navbar = () => {
           to="/auth/profile"
           className={({ isActive }) =>
             isActive
-              ? "bg-[#2196f3] lg:text-lg text-white font-bold px-10 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
-              : "bg-white text-lg font-bold px-10 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
+              ? "bg-[#2196f3] lg:text-lg text-white font-bold md:px-5 btn rounded-full hover:bg-transparent hover:text-[#2196f3]"
+              : "bg-white text-lg font-bold md:px-5 btn rounded-full hover:border-[#2196f3] hover:bg-transparent hover:text-[#2196f3]"
           }
         >
           My Profile
@@ -106,7 +106,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal flex gap-10 text-lg font-extrabold">
+          <ul className="menu menu-horizontal flex gap-3 text-lg font-extrabold">
             {links}
           </ul>
         </div>
