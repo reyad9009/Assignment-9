@@ -5,7 +5,7 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 const WhyCourse = () => {
   return (
-    <div className=" flex flex-col justify-center items-center mt-8">
+    <div className=" flex flex-col justify-center items-center my-40">
       <h1 className="text-4xl font-bold">Why Career kindle</h1>
       <p className="text-lg mt-3 mb-16">GROW YOUR KNOWLEDGE AND STAY AHEAD OF KNOWLEDGE-ECONOMY</p>
       <div className="flex flex-row gap-10">

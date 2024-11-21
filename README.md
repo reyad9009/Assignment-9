@@ -1,5 +1,6 @@
 # Career Kindle
 ## Live link : https://assignment-9-react-adfa5.web.app/
+## Assignment Category: 004 
 
 # Features and Characteristics:
 ## 1. User Registration
@@ -29,9 +30,3 @@
 * Logged users can edit the name and photoURL and save the changes.
 * Update the user's information stored securely in Firebase.
 
-
-
-
-<P>import { Rating } from '@smastrom/react-rating'
-
-import '@smastrom/react-rating/style.css'</P>

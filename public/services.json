@@ -6,7 +6,7 @@
         "brief_description": "Personalized career counseling to help you navigate your career path.",
         "pricing": "$100",
         "duration": "05-12-24 5-6pm",
-        "counselor": "John Doe",
+        "counselor": "James Choong",
         "rating": 4.8,
         "image": "https://i.ibb.co.com/HG7T6s8/Career-Counseling-Sessions.jpg"
     },
@@ -17,7 +17,7 @@
         "brief_description": "Get expert feedback on your resume to improve your chances in the job market.",
         "pricing": "$50",
         "duration": "06-12-24 2-3pm",
-        "counselor": "Jane Smith",
+        "counselor": "Yi Mei Lee",
         "rating": 4.7,
         "image": "https://i.ibb.co.com/Ntqgg15/Resume-Review.webp"
     },
@@ -28,7 +28,7 @@
         "brief_description": "Join a group of like-minded individuals and get career guidance together.",
         "pricing": "$30 per person",
         "duration": "07-12-24 10-12pm",
-        "counselor": "Michael Lee",
+        "counselor": "Vanessa Chin",
         "rating": 4.5,
         "image": "https://i.ibb.co.com/rsB9FSX/Group-Career-Workshop.webp"
     },
@@ -39,7 +39,7 @@
         "brief_description": "Prepare for your job interviews with mock sessions and feedback.",
         "pricing": "$80",
         "duration": "08-12-24 4-5pm",
-        "counselor": "Sarah Johnson",
+        "counselor": "Yee Dan Low",
         "rating": 4.9,
         "image": "https://i.ibb.co.com/SvBJvL2/Interview-Preparation.png"
     },
@@ -50,7 +50,7 @@
         "brief_description": "Get your LinkedIn profile optimized to stand out to recruiters.",
         "pricing": "$70",
         "duration": "09-12-24 1-2pm",
-        "counselor": "David Williams",
+        "counselor": "Yee Huei Lim",
         "rating": 4.6,
         "image": "https://i.ibb.co.com/x6LSQn5/Linked-In-Profile-Optimization.png"
     },
@@ -61,7 +61,7 @@
         "brief_description": "Learn strategies for negotiating your salary and benefits in your next job.",
         "pricing": "$90",
         "duration": "10-12-24 3-4pm",
-        "counselor": "Emily Clark",
+        "counselor": "Vivien Joshua",
         "rating": 4.8,
         "image": "https://i.ibb.co.com/Mh2LHRG/Salary-Negotiation-Coaching.jpg"
     },
@@ -72,7 +72,7 @@
         "brief_description": "Get tailored job search strategies based on your experience and goals.",
         "pricing": "$75",
         "duration": "11-12-24 11-12pm",
-        "counselor": "Robert White",
+        "counselor": "Samantha Lim",
         "rating": 4.7,
         "image": "https://i.ibb.co.com/MNjzVQk/Job-Search-Strategy-Session.jpg"
     },
@@ -83,7 +83,7 @@
         "brief_description": "Assistance with transitioning to a new career field or industry.",
         "pricing": "$120",
         "duration": "12-12-24 6-7pm",
-        "counselor": "Olivia Brown",
+        "counselor": "Angelynn Lim",
         "rating": 4.9,
         "image": "https://i.ibb.co.com/Sx2mq1Q/Career-Transition-Support.webp"
     },
