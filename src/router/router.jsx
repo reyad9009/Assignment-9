@@ -11,6 +11,7 @@ import ForgotPassword from "../pages/ForgotPassword";
 import Services from "../pages/Services";
 import ServiceDetail from "../pages/ServiceDetail";
 import MyClass from "../pages/MyClass";
+import Faq from "../pages/Faq";
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,11 @@ const router = createBrowserRouter([
         loader: () => fetch("../services.json"),
       },
       {
-        path: "/my-class",
+        path: "/faq",
+        element: <Faq></Faq>
+      },
+      {
+        path: "/my-classes",
         element: (
           <PrivateRout>
             <MyClass></MyClass>

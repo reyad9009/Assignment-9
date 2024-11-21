@@ -15,7 +15,7 @@ const CategoryNavbar = () => {
       <div>
         <h1 className="text-center text-5xl font-bold mb-14">Our Services</h1>
       </div>
-      <div className="flex space-x-4 p-4">
+      <div className="flex flex-col lg:flex-row lg:space-x-4 gap-6 lg:gap-0  p-4">
         <NavLink
           to="/"
           className={({ isActive }) =>

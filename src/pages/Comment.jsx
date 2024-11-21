@@ -11,7 +11,7 @@ const Comment = () => {
     }
   };
   return (
-    <div className="mt-10 w-[40rem] mx-auto">
+    <div className="lg:mt-10 lg:w-[40rem] w-[23rem] mx-auto">
       <h2 className="text-2xl font-bold mb-5">Comments & Feedback</h2>
       <div className="flex flex-col gap-4">
         <textarea
@@ -35,7 +35,7 @@ const Comment = () => {
             {comments.map((comment, index) => (
               <li
                 key={index}
-                className="border-b pb-2 text-lg font-medium text-gray-700"
+                className="border border-[#2196f3] rounded-lg py-2 px-5 text-lg font-medium text-black"
               >
                 {comment}
               </li>

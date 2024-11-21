@@ -33,7 +33,7 @@ const ServiceDetail = () => {
     else {
       addCardItem(service);
       //alert("Item added to card successfully!");
-      toast.success(`${service_name} Added Your Card Success`);
+      toast.success(`Congratulation ${service_name} Enroll successful`);
     }
    // addCardItem(gadget); 
   };
@@ -45,8 +45,8 @@ const ServiceDetail = () => {
           Service Details
         </h1>
       </div>
-      <div className="flex justify-center items-start gap-40">
-        <div className="card card-compact w-[30rem] h-auto flex flex-col border">
+      <div className="flex justify-center items-center flex-col lg:flex-row lg:items-start gap-40">
+        <div className="card card-compact lg:w-[30rem] w-[22rem] h-auto flex flex-col border">
           <figure className="flex justify-center items-center">
             <img className="w-[100%] rounded-t-lg" src={image} alt={service_name} />
           </figure>

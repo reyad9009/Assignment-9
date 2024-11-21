@@ -5,12 +5,12 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 const WhyCourse = () => {
   return (
-    <div className=" flex flex-col justify-center items-center my-40">
+    <div className=" flex flex-col c justify-center items-center my-40">
       <h1 className="text-4xl font-bold">Why Career kindle</h1>
-      <p className="text-lg mt-3 mb-16">GROW YOUR KNOWLEDGE AND STAY AHEAD OF KNOWLEDGE-ECONOMY</p>
-      <div className="flex flex-row gap-10">
+      <p className="text-lg mt-3 mb-16 text-center px-3">GROW YOUR KNOWLEDGE AND STAY AHEAD OF KNOWLEDGE-ECONOMY</p>
+      <div className="flex lg:flex-row items-center flex-col gap-10">
 
-        <div className="p-10  w-[25rem] gap-5 flex flex-col justify-center items-center border rounded-xl shadow-lg">
+        <div className="p-10  lg:w-[25rem] w-[23rem] gap-5 flex flex-col justify-center items-center border rounded-xl shadow-lg">
           <VscWorkspaceTrusted className="text-9xl text-[#2196f3]"/>
           <h1 className="text-2xl font-bold">TRUSTED KNOWLEDGE</h1>
           <p className="text-center ">
@@ -19,7 +19,7 @@ const WhyCourse = () => {
           </p>
         </div>
 
-        <div className=" p-10 flex w-[25rem] gap-5 flex-col justify-center items-center border rounded-xl shadow-lg">
+        <div className=" p-10 flex lg:w-[25rem] w-[23rem] gap-5 flex-col justify-center items-center border rounded-xl shadow-lg">
           <MdOutlineAccessTime className="text-9xl text-[#2196f3]" />
           <h1  className="text-2xl font-bold">TRUSTED KNOWLEDGE</h1>
           <p className="text-center">
@@ -28,7 +28,7 @@ const WhyCourse = () => {
           </p>
         </div>
 
-        <div className="p-10 flex w-[25rem] gap-5 flex-col justify-center items-center border rounded-xl shadow-lg">
+        <div className="p-10 flex lg:w-[25rem] w-[23rem] gap-5 flex-col justify-center items-center border rounded-xl shadow-lg">
         <FaPeopleGroup className="text-9xl text-[#2196f3]"/>
           <h1  className="text-2xl font-bold">TRUSTED KNOWLEDGE</h1>
           <p className="text-center">

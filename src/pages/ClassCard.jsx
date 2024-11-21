@@ -3,12 +3,12 @@ import React from "react";
 const ClassCard = ({ classCard }) => {
   const { service_id, service_name, duration, counselor, image } = classCard;
   return (
-    <div className="flex justify-stretch gap-16 p-6 border rounded-xl">
+    <div className="flex flex-col lg:flex-row lg:justify-stretch gap-16 p-6 border rounded-xl w-[22rem] lg:w-[65rem]">
       <figure>
         <img src={image} className="w-[600px] rounded-lg" />
       </figure>
 
-      <div className="flex items-center w-[100%] justify-between">
+      <div className="flex items-center w-[100%]  justify-between">
         <div className="">
           <span className="card-title text-3xl ">{service_name}</span>
           <span className="card-title py-4">Counselor: {counselor}</span>

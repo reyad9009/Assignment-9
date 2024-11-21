@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="text-center mt-[10%]">
-      <footer className="footer flex justify-evenly flex-row text-base-content py-20 bg-[#2196f3]">
-        <nav>
+      <footer className="footer flex lg:justify-evenly pl-5 lg:flex-row flex-col text-base-content py-20 bg-[#2196f3]">
+        <nav className="">
           <h6 className="font-extrabold text-2xl text-balance">Services</h6>
           <a className="link link-hover text-base font-semibold">Skill Development</a>
           <a className="link link-hover text-base font-semibold">Career </a>
@@ -13,14 +13,12 @@ const Footer = () => {
           <a className="link link-hover text-base font-semibold">Resume Review </a>
           <a className="link link-hover text-base font-semibold">Career Transition Support </a>
         </nav>
-        <nav>
+        <nav className="">
           <h6 className="font-extrabold text-2xl text-balance">Company</h6>
           <a className="link link-hover text-base font-semibold">About us</a>
           <a className="link link-hover text-base font-semibold">Contact</a>
-          <a className="link link-hover text-base font-semibold">Jobs</a>
-          <a className="link link-hover text-base font-semibold">Press kit</a>
         </nav>
-        <nav>
+        <nav className="">
           <h6 className="font-extrabold text-2xl text-balance">Legal</h6>
           <a className="link link-hover text-base font-semibold">Terms of use</a>
           <a className="link link-hover text-base font-semibold">Privacy policy</a>

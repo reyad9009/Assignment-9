@@ -6,7 +6,7 @@ const ServicesCard = ({ service }) => {
     service;
   return (
     <div>
-      <div className="card card-compact w-[25rem] h-[35rem] flex flex-col border">
+      <div className="card card-compact lg:w-[25rem] lg:h-[35rem] w-[22rem] flex flex-col border">
         <figure className="">
           <img className="w-[100%]" src={image} alt={service_name} />
         </figure>
