@@ -6,9 +6,9 @@ import Loading from "../pages/Loading";
 
 const PrivateRout = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
-  if(loading){
-    return <Loading></Loading>
-}
+  if (loading) {
+    return <Loading></Loading>;
+  }
   if (user && user?.email) {
     return children;
   }
